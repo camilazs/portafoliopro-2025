@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Sidebar from "@/components/ui/Sidebar"
 
 export default function Inicio() {
@@ -36,12 +37,16 @@ export default function Inicio() {
               overflow: "hidden",
               backgroundColor: "#eee",
               marginBottom: "1.5rem",
+              position: "relative",
             }}
           >
-            <img
+            <Image
               src="/foto.jpg"
               alt="Foto"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              fill
+              style={{ objectFit: "cover", borderRadius: "9999px" }}
+              sizes="160px"
+              priority
             />
           </div>
 
@@ -70,27 +75,6 @@ export default function Inicio() {
           </p>
         </main>
       </div>
-
-      {/* Estilos responsivos */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          div[style*='flex-direction: row'] {
-            flex-direction: column;
-          }
-
-          main {
-            padding: 2rem 1rem;
-          }
-
-          h1 {
-            font-size: 1.5rem;
-          }
-
-          p {
-            font-size: 0.8rem;
-          }
-        }
-      `}</style>
     </div>
   )
 }

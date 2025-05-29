@@ -1,4 +1,6 @@
 "use client"
+
+import Image from "next/image"
 import Sidebar from "@/components/ui/Sidebar"
 
 export default function SobreMi() {
@@ -51,9 +53,7 @@ export default function SobreMi() {
                 fontSize: "1rem",
               }}
             >
-              ¡Hola! Soy Camila Zambrano, tengo 20 años y soy asistente virtual.
-              Me apasiona la tecnología y siempre he tenido un fuerte deseo por ayudar a los demás. Desde muy joven descubrí que tenía habilidades para organizar, planificar y resolver problemas de manera eficiente.
-              Gracias a esto, decidí dedicarme profesionalmente a ser asistente virtual, brindando apoyo integral a emprendedores y profesionales.
+              ¡Hola! Soy Camila Zambrano, tengo 20 años y soy asistente virtual. Me apasiona la tecnología y siempre he tenido un fuerte deseo por ayudar a los demás. Desde muy joven descubrí que tenía habilidades para organizar, planificar y resolver problemas de manera eficiente. Gracias a esto, decidí dedicarme profesionalmente a ser asistente virtual, brindando apoyo integral a emprendedores y profesionales.
             </p>
             <p
               style={{
@@ -97,17 +97,17 @@ export default function SobreMi() {
               justifyContent: "center",
               boxShadow: "0 10px 20px rgba(0,0,0,0.05)",
               flexShrink: 0,
+              position: "relative",
+              overflow: "hidden",
             }}
           >
-            <img
+            <Image
               src="/foto.jpg"
               alt="Foto"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                borderRadius: "1rem",
-              }}
+              fill
+              style={{ objectFit: "cover", borderRadius: "1rem" }}
+              sizes="220px"
+              priority
             />
           </div>
         </div>
